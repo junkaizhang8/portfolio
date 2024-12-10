@@ -1,0 +1,61 @@
+.home {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 10% 0;
+  gap: 8rem;
+}
+
+.home-content h3 {
+  color: var(--text-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.home-content h1 {
+  color: var(--text-color);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2rem;
+}
+
+.typing-text {
+  color: var(--primary-color);
+}
+
+.home-img img {
+  width: 25rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.socials a {
+  display: inline-flex;
+  color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 1.2rem;
+  background: transparent;
+  border: 0.15rem solid var(--primary-color);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: 0.5s ease;
+}
+
+.socials a:hover {
+  background: var(--primary-color);
+  color: var(--secondary-background);
+  box-shadow: 0 0 0.5rem var(--primary-color);
+}

@@ -3,8 +3,9 @@
 /* Global Variables */
 :root {
   --background: #1f242d;
-  --primary-color: white;
-  --secondary-color: #00eeff;
+  --secondary-background: #323946;
+  --text-color: white;
+  --primary-color: #00eeff;
 }
 
 * {
@@ -12,54 +13,37 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background);
 }
 
-.header {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem 10%;
-  background: transparent;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
-
-.logo {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: default;
-}
-
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-}
-
-.nav-bar a {
-  display: flex;
-  color: var(--primary-color);
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--secondary-background);
+  padding: 0.7rem 2rem;
+  margin-right: 0.6rem;
   font-size: 1.1rem;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 3rem;
-  cursor: pointer;
-  transition: 0.3s;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border-radius: 4rem;
+  box-shadow: 0 0 0.5rem var(--primary-color);
+  transition: 0.5s ease;
 }
 
-.nav-bar a:hover {
-  color: var(--secondary-color);
-  transform: scale(1.2);
+.btn:hover {
+  box-shadow: none;
 }
 
-.nav-bar a.active {
-  color: var(--secondary-color);
+.btn:last-child {
+  margin-right: 0;
 }
