@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 10%;
+  padding: 2rem 10%;
   background: transparent;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +13,7 @@
 
 .logo {
   color: var(--text-color);
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-decoration: none;
   cursor: default;
@@ -27,10 +27,10 @@
 .nav-bar a {
   display: flex;
   color: var(--text-color);
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   font-weight: 400;
   text-decoration: none;
-  margin-left: 3rem;
+  margin-left: 4rem;
   cursor: pointer;
   transition: 0.3s ease;
 }
