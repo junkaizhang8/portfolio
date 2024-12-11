@@ -202,10 +202,13 @@ span {
   display: flex;
   background: var(--secondary-background);
   align-items: center;
-  gap: 2rem;
 }
 
-.about-content h2 {
+.about-content {
+  padding: 0 10%;
+}
+
+.about-content .heading {
   text-align: left;
   line-height: 1.2;
 }
@@ -217,6 +220,38 @@ span {
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+}
+
+
+/* Skills */
+.skills {
+  display: flex;
+  align-items: center;
+}
+
+.skills-content {
+  padding: 0 10%;
+}
+
+.skills-content .heading {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-list h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.skills-list p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
 }
 
 
