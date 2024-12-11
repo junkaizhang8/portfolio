@@ -203,12 +203,12 @@ span {
 
 .socials a {
   display: inline-flex;
+  background: transparent;
   color: var(--primary-color);
   justify-content: center;
   align-items: center;
   width: 4rem;
   height: 4rem;
-  background: transparent;
   border: 0.2rem solid var(--primary-color);
   border-radius: 50%;
   font-size: 2rem;
@@ -285,6 +285,79 @@ span {
   background: var(--secondary-background);
   justify-content: center;
   align-items: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 2rem;
+  margin: 3rem 0;
+}
+
+.project-container {
+  display: flex;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  background: var(--background);
+  width: 100%;
+  height: 20rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.project-container:hover {
+  box-shadow: 0 0 3rem var(--primary-color);
+}
+
+.project-overlay {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+}
+
+.project-overlay h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.project-overlay p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.project-overlay .links-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-overlay a {
+  display: inline-flex;
+  background: var(--text-color);
+  color: var(--secondary-background);
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: 0.5s ease;
+}
+
+.project-overlay a:hover {
+  box-shadow: 0 0 1rem var(--text-color);
 }
 
 
