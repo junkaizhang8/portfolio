@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
+  border: none;
   outline: none;
   scroll-behavior: smooth;
 }
@@ -50,6 +51,7 @@ span {
   font-weight: 600;
   border-radius: 4rem;
   box-shadow: 0 0 1rem var(--primary-color);
+  cursor: pointer;
   transition: 0.5s ease;
 }
 
@@ -252,6 +254,84 @@ span {
 .skills-list p {
   font-size: 1.6rem;
   margin: 1rem 0;
+}
+
+
+/* Projects */
+.projects {
+  background: var(--secondary-background);
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Contact */
+.contact {
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .heading {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form input::-webkit-outer-spin-button,
+.contact form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.contact form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--secondary-background);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+}
+
+
+/* Footer */
+.footer {
+  background: var(--secondary-background);
+  text-align: center;
+  padding: 2rem 3%;
+}
+
+.footer p {
+  font-size: 1.4rem;
+  text-align: left;
 }
 
 
