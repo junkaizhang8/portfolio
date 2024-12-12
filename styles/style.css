@@ -302,13 +302,15 @@ span {
   background: var(--background);
   width: 100%;
   height: 20rem;
+  border: 0.2rem solid transparent;
   border-radius: 3rem;
   overflow: hidden;
   transition: 0.5s ease;
 }
 
 .project-container:hover {
-  box-shadow: 0 0 3rem var(--primary-color);
+  border-color: var(--primary-color);
+  scale: 1.04;
 }
 
 .project-overlay {
