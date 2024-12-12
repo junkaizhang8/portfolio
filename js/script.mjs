@@ -1,3 +1,11 @@
+const menuIcon = document.querySelector("#menuIcon");
+const navbar = document.querySelector(".nav-bar");
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
+
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
 
@@ -20,6 +28,9 @@ window.onscroll = () => {
           .classList.add("active");
       });
     }
+
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
   });
 
   const header = document.querySelector("header");
