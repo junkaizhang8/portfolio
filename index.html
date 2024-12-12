@@ -207,24 +207,31 @@
     </section>
     <section id="contact" class="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
-      <form action="#">
+      <form id="contactForm" method="POST">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input type="text" name="subject" placeholder="Email Subject" />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email Address (Optional)"
+          />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject" required />
+          <input type="text" name="name" placeholder="Full Name (Optional)" />
+          <input
+            type="text"
+            name="mobile"
+            placeholder="Mobile Number (Optional)"
+          />
         </div>
         <textarea
-          name=""
-          id=""
+          name="message"
           cols="30"
           rows="10"
           placeholder="Your Message"
-          required
         ></textarea>
         <input type="submit" value="Send Message" class="btn" />
+        <input type="hidden" name="_captcha" value="true" />
       </form>
     </section>
     <footer class="footer">
@@ -235,5 +242,7 @@
         <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
       </div>
     </footer>
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="https://unpkg.com/scrollreveal"></script>
   </body>
 </html>

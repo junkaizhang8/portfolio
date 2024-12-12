@@ -109,3 +109,108 @@ const typewriterMessages = [
 ];
 
 createTypewriter(".typewriter", typewriterMessages);
+
+ScrollReveal({
+  reset: true,
+  distance: "80px",
+  duration: 2000,
+  delay: 200,
+});
+
+ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
+ScrollReveal().reveal(
+  ".home-img, .skills-list, .projects-grid, .contact form",
+  {
+    origin: "bottom",
+  }
+);
+ScrollReveal().reveal(".home-content h1", { origin: "left" });
+ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
+
+// Toast
+const toast = (() => {
+  const module = {};
+
+  const toastContainer = document.querySelector("#toastContainer");
+
+  const makeToast = (message, duration = 3000) => {
+    if (duration <= 0) {
+      throw new Error("Duration must be greater than 0");
+    }
+
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+    toast.innerHTML = `
+    <i class="bx bx-x toast-close"></i>
+    <p>${message}</p>
+    <div class="toast-progress-bar"></div>
+   `;
+
+    // Set the animation duration of the progress bar
+    const progressBar = toast.querySelector(".toast-progress-bar");
+    progressBar.style.animationDuration = `${duration}ms`;
+
+    // Close the toast message
+    const toastClose = toast.querySelector(".toast-close");
+    toastClose.addEventListener("click", () => {
+      toast.remove();
+    });
+
+    // Remove the toast message after the duration
+    setTimeout(() => {
+      toast.remove();
+    }, duration);
+
+    toastContainer.prepend(toast);
+    return toast;
+  };
+
+  module.success = (message, duration = 3000) => {
+    const toast = makeToast(message, duration);
+    toast.classList.add("toast-success");
+  };
+
+  module.error = (message, duration = 3000) => {
+    const toast = makeToast(message, duration);
+    toast.classList.add("toast-error");
+  };
+
+  return module;
+})();
+
+// Contact form submission
+const form = document.querySelector("#contactForm");
+form.addEventListener("submit", async (e) => {
+  // Prevent reloading the page
+  e.preventDefault();
+
+  // Get the form data
+  const formData = new FormData(form);
+  const subject = formData.get("subject");
+  const email = formData.get("email");
+  const message = formData.get("message");
+
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (!subject) {
+    toast.error("Email subject is required", 3000);
+    return;
+  }
+
+  if (!message) {
+    toast.error("Email message is required", 3000);
+    return;
+  }
+
+  if (email && !emailRegex.test(email)) {
+    toast.error("Invalid email address", 3000);
+    return;
+  }
+
+  try {
+    form.action = "https://formsubmit.co/junkaizhang8@gmail.com";
+    form.submit();
+  } catch (error) {
+    toast.error("Failed to send email", 3000);
+  }
+});
